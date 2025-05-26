@@ -353,31 +353,40 @@ plot_default_c <- cowplot::plot_grid(
   plot_ale(ale_default_c, "CUSTOMER_BEFORE", categorical_variables),
   plot_ale(ale_default_c, "ANNUAL_TURNOVER_LAST_YEAR", categorical_variables),
   plot_ale(ale_default_c, "BRANCH_other", categorical_variables),
-  nrow = 3, ncol = 3)
+  plot_ale(ale_default_c, "car_age", categorical_variables),
+  plot_ale(ale_default_c, "PHONE", categorical_variables),
+  plot_ale(ale_default_c, "length_coop", categorical_variables),
+  plot_ale(ale_default_c, "ANNUAL_INCOME_LAST_YEAR", categorical_variables),
+  plot_ale(ale_default_c, "NUMBER_OF_EMPLOYEES", categorical_variables),
+  nrow = 4, ncol = 4)
 plot_default_c
 ggsave(
   "/Users/sophielangbein/Desktop/PhD/CR_IML/plots/ale_default_c.pdf",
   plot = plot_default_c,
-  width = 15,
-  height = 10
+  width = 20,
+  height = 15
 )
 # plot centered ale values default
 plot_prepayment_c <- cowplot::plot_grid(
   plot_ale(ale_prepayment_c, "NET_ASSETS", categorical_variables),
-  plot_ale(ale_prepayment_c, "car_age", categorical_variables),
+  plot_ale(ale_prepayment_c, "DOWNPAYMENT_TO_CAR_PRICE", categorical_variables),
+  plot_ale(ale_prepayment_c, "BRANCH_services", categorical_variables),
+  plot_ale(ale_prepayment_c, "NUMBER_OF_ALL_BAD_PREVIOUS_CONTR", categorical_variables),
   plot_ale(ale_prepayment_c, "COMPANY_AGE", categorical_variables),
-  plot_ale(ale_prepayment_c, "PHONE", categorical_variables),
+  plot_ale(ale_prepayment_c, "CAR_PRICE", categorical_variables),
+  plot_ale(ale_prepayment_c, "CUSTOMER_BEFORE", categorical_variables),
   plot_ale(ale_prepayment_c, "ANNUAL_TURNOVER_LAST_YEAR", categorical_variables),
+  plot_ale(ale_prepayment_c, "BRANCH_other", categorical_variables),
+  plot_ale(ale_prepayment_c, "car_age", categorical_variables),
+  plot_ale(ale_prepayment_c, "PHONE", categorical_variables),
+  plot_ale(ale_prepayment_c, "length_coop", categorical_variables),
   plot_ale(ale_prepayment_c, "ANNUAL_INCOME_LAST_YEAR", categorical_variables),
   plot_ale(ale_prepayment_c, "NUMBER_OF_EMPLOYEES", categorical_variables),
-  plot_ale(ale_prepayment_c, "length_coop", categorical_variables),
-  plot_ale(ale_prepayment_c, "NUMBER_OF_ALL_BAD_PREVIOUS_CONTR", categorical_variables),
-  nrow = 3, ncol = 3)
+  nrow = 4, ncol = 4)
 plot_prepayment_c
 ggsave(
   "/Users/sophielangbein/Desktop/PhD/CR_IML/plots/ale_prepayment_c.pdf",
   plot = plot_prepayment_c,
-  width = 15,
-  height = 10
+  width = 20,
+  height = 15
 )
-plot_ale(ale_prepayment_c, "PHONE", categorical_variables)
